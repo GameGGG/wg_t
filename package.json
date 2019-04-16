@@ -7,12 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "t": "bin/index.js"
+    "t": "./bin/index.js"
   },
   "email": "mganxiaolei@gmail.com",
   "author": "不落礁",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "axios": "^0.18.0"
   },
   "repository": {
