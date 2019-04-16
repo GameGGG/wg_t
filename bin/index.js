@@ -2,7 +2,10 @@
 const { youdao, baidu, google } = require('translation.js');
 
 async function translate(word) {
-    console.log(word);
+    if (word) {
+        console.log('请输入翻译内容');
+        return;
+    }
     const gr = await google.translate(word);
     const br = await baidu.translate(word);
     const yr = await youdao.translate(word);
