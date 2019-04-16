@@ -13,7 +13,7 @@
   "author": "不落礁",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0"
+    "translation.js": "^0.7.5"
   },
   "repository": {
     "type": "git",
