@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const axios = require('axios');
 const { youdao, baidu, google } = require('translation.js');
 
 async function translate(word) {
