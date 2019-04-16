@@ -2,7 +2,7 @@
 const { youdao, baidu, google } = require('translation.js');
 
 async function translate(word) {
-    if (word) {
+    if (!word) {
         console.log('请输入翻译内容');
         return;
     }
