@@ -9,18 +9,6 @@ async function translate(word) {
         return;
     }
 
-    // 检测是否是本地文件或者是网址
-    if (urlRex.test(word)) {
-        if (!/^(http|https|ftp):\/\//.word) {
-            word = `http://${word}`;
-        }
-        open(word).then(res => {
-            console.log(`已打开网址：${word}`);
-        }).catch(err => {
-            console.log('打开网址失败');
-        });
-        return;
-    };
 
     const gr = await google.translate(word);
     const br = await baidu.translate(word);
@@ -36,4 +24,28 @@ async function translate(word) {
 
 const word = process.argv.slice(2);
 
-translate(word[0]);
+
+// 检测是否是本地文件或者是网址
+if (urlRex.test(word)) {
+    if (!/^(http|https|ftp):\/\//.word) {
+        word = `http://${word}`;
+    }
+    open(word).then(res => {
+        console.log(`已打开网址：${word}`);
+    }).catch(err => {
+        console.log('打开网址失败');
+    });
+    return;
+};
+if (word[0] === '?') {
+    let baseUrl = 'https://www.baidu.com/s?w=';
+    let questionUrl = `${baseUrl}${encodeURIComponent(word.slice(1).join(' '))}`;
+    open(questionUrl).then(res => {
+        console.log(`请前往浏览器查看结果`);
+    }).catch(err => {
+        console.log(`打开浏览器失败，请复制链接到浏览器中：${questionUrl}`);
+    });
+    return;
+}
+let str = word.join(' ');
+translate(str);
