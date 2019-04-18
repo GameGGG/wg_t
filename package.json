@@ -1,6 +1,6 @@
 {
   "name": "wg_t",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "translate word",
   "main": "index.js",
   "scripts": {
