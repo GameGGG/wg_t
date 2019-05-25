@@ -13,6 +13,7 @@
   "author": "不落礁",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "open": "^6.1.0",
     "translation.js": "^0.7.5"
