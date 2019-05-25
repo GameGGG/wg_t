@@ -15,5 +15,17 @@ module.exports = [
                 des: '在网页中搜索查找结果'
             }
         ]
+    },
+    {
+        command: 'create [name]',
+        alias: 'c',
+        description: '创建新项目',
+        actionModule: 'create',
+        options: [
+            {
+                argv: '-t, --type',
+                des: '新建项目类型'
+            }
+        ]
     }
 ]

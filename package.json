@@ -15,6 +15,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
+    "fs-extra": "^8.0.1",
     "open": "^6.1.0",
     "translation.js": "^0.7.5"
   },
