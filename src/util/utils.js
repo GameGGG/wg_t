@@ -10,3 +10,5 @@ exports.styles = {
     sortLine: '======',
     line: '================'
 }
+
+exports.log = console.log;

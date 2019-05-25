@@ -23,7 +23,7 @@ module.exports = [
         actionModule: 'create',
         options: [
             {
-                argv: '-t, --type',
+                argv: '-t, --type <type>',
                 des: '新建项目类型'
             }
         ]

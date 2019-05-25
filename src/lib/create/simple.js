@@ -1,17 +1,16 @@
 const path = require('path');
 const fsExtra = require('fs-extra');
-const { chalkTheme } = require('./../../util/utils.js');
+const { chalkTheme, log } = require('./../../util/utils.js');
 
 const templatePath = path.join(__dirname, './template/simple/');
-function copyFilesToCurDir(targetPath) {
-    console.log(targetPath);
-    fsExtra.copy(templatePath, targetPath)
-        .then(res => {
-            console.log(chalkTheme.pass('项目创建成功'));
-        })
-        .catch(err => {
-            console.log(err);
-        });
+async function copyFilesToCurDir(opt) {
+    const targetPath = path.join(opt.dir, opt.name);
+    try {
+        await fsExtra.copy(templatePath, targetPath);
+    }
+    catch (err) {
+        log(chalkTheme.error(err));
+    }
 }
 module.exports = {
     create: copyFilesToCurDir
