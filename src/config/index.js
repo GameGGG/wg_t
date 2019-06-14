@@ -27,5 +27,20 @@ module.exports = [
                 des: '新建项目类型'
             }
         ]
+    },
+    {
+        command: 'server',
+        description: '启动本地服务',
+        actionModule: 'server',
+        options: [
+            {
+                argv: '-p, --port [port]',
+                des: '服务端口号'
+            },
+            {
+                argv: '--path [path]',
+                des: '指定路径'
+            }
+        ]
     }
 ]

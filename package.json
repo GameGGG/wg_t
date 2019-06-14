@@ -16,6 +16,8 @@
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "fs-extra": "^8.0.1",
+    "koa": "^2.7.0",
+    "koa-static": "^5.0.0",
     "open": "^6.1.0",
     "translation.js": "^0.7.5"
   },
