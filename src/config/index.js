@@ -27,5 +27,15 @@ module.exports = [
                 des: '新建项目类型'
             }
         ]
+    },
+    {
+        command: 'commit [branch]',
+        description: '提交项目',
+        actionModule: 'commit'
+    },
+    {
+        command: 'checkout [branch]',
+        description: '切换分支',
+        actionModule: 'checkout'
     }
 ]
