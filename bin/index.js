@@ -24,7 +24,6 @@ config.forEach(item => {
             subProgram.option(subItem.argv, subItem.des);
         });
     }
-                
 });
 
 
