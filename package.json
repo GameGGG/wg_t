@@ -20,7 +20,7 @@
     "koa": "^2.7.0",
     "koa-static": "^5.0.0",
     "open": "^6.1.0",
-    "translation.js": "^0.7.5"
+    "puppeteer": "^1.18.1"
   },
   "repository": {
     "type": "git",
