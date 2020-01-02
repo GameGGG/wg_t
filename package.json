@@ -8,7 +8,7 @@
   },
   "bin": {
     "wg": "./bin/index.js",
-    "t": "./bin/translate.js"
+    "w": "./bin/index.js"
   },
   "email": "mganxiaolei@gmail.com",
   "author": "不落礁",
@@ -19,7 +19,9 @@
     "fs-extra": "^8.0.1",
     "koa": "^2.7.0",
     "koa-static": "^5.0.0",
-    "open": "^6.1.0"
+    "open": "^6.1.0",
+    "inquirer": "^6.3.1",
+    "simple-git": "^1.113.0"
   },
   "repository": {
     "type": "git",

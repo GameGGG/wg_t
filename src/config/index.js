@@ -42,5 +42,16 @@ module.exports = [
                 des: '指定路径'
             }
         ]
+    },
+    {
+        command: 'commit [branch]',
+        description: '提交项目',
+        actionModule: 'commit'
+    },
+    {
+        command: 'checkout [branch]',
+        alias: 'ck',
+        description: '切换分支',
+        actionModule: 'checkout'
     }
 ]
