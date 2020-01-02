@@ -1,19 +1,22 @@
 const open = require('open');
 const { chalkTheme, styles } = require('./../util/utils.js');
-const { youdao, baidu, google } = require('translation.js');
+const reptileTrans = require('./../lib/reptile/index.js');
 
 async function translate(word, options) {
     if (!word) {
         console.log('请输入内容');
         return;
     }
-    const gr = await google.translate(word);
-    const br = await baidu.translate(word);
-    const yr = await youdao.translate(word);
+    let br;
+    try {
+        const transResult = await reptileTrans(word);
+        br = transResult.baidu;
+    }
+    catch (e) {
+        br = chalkTheme.error(e);
+    }
 
-    console.log('google: ', chalkTheme.pass(gr.result.join(' ')));
-    console.log('baidu: ', chalkTheme.pass(br.result.join(' ')));
-    console.log('youdao: ', chalkTheme.pass(yr.result.join(' ')));
+    console.log('baidu: ', chalkTheme.pass(br));
 
     if (options.search) {
         let baseUrl = 'https://www.baidu.com/s?w=';

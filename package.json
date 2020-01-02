@@ -1,13 +1,14 @@
 {
   "name": "wg_tools",
-  "version": "2.0.2",
+  "version": "2.0.7",
   "description": "person cli",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "wg": "./bin/index.js"
+    "wg": "./bin/index.js",
+    "t": "./bin/translate.js"
   },
   "email": "mganxiaolei@gmail.com",
   "author": "不落礁",
@@ -18,8 +19,7 @@
     "fs-extra": "^8.0.1",
     "inquirer": "^6.3.1",
     "open": "^6.1.0",
-    "simple-git": "^1.113.0",
-    "translation.js": "^0.7.5"
+    "simple-git": "^1.113.0"
   },
   "repository": {
     "type": "git",
