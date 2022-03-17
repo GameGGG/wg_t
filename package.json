@@ -21,7 +21,7 @@
     "koa-static": "^5.0.0",
     "open": "^6.1.0",
     "inquirer": "^6.3.1",
-    "simple-git": "^1.113.0"
+    "simple-git": "^3.3.0"
   },
   "repository": {
     "type": "git",
